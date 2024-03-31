@@ -1,4 +1,4 @@
-import 'package:empat_project_5/colors.dart';
+import 'package:empat_project_5/colors/colors.dart';
 import 'package:flutter/material.dart';
 
 ThemeData lightMode = ThemeData(

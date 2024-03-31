@@ -1,4 +1,4 @@
-import 'package:empat_project_5/colors.dart';
+import 'package:empat_project_5/colors/colors.dart';
 import 'package:empat_project_5/components/my_button.dart';
 import 'package:empat_project_5/models/product.dart';
 import 'package:empat_project_5/models/shop.dart';
@@ -81,7 +81,7 @@ class CartPage extends StatelessWidget {
             padding: const EdgeInsets.all(50.0),
             child: MyButton(
               onTap: () => payButtonPressed(context),
-              child: Text("PAY NOW"),
+              child: const Text("PAY NOW"),
             ),
           )
         ],

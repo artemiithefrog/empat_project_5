@@ -1,4 +1,4 @@
-import 'package:empat_project_5/colors.dart';
+import 'package:empat_project_5/colors/colors.dart';
 import 'package:empat_project_5/components/my_drawer.dart';
 import 'package:empat_project_5/components/my_product_tile.dart';
 import 'package:empat_project_5/models/shop.dart';
@@ -22,7 +22,7 @@ class ShopPage extends StatelessWidget {
             IconButton(
               onPressed: () => Navigator.pushNamed(context, '/cart_page'),
               icon: const Icon(Icons.shopping_cart_outlined),
-            )
+            ),
           ],
         ),
         drawer: const MyDrawer(),

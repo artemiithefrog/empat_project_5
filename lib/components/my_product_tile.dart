@@ -1,7 +1,6 @@
 import 'package:empat_project_5/models/product.dart';
 import 'package:empat_project_5/models/shop.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class MyProductTile extends StatelessWidget {
@@ -13,18 +12,18 @@ class MyProductTile extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        content: Text('Add this item to your cart?'),
+        content: const Text('Add this item to your cart?'),
         actions: [
           MaterialButton(
             onPressed: () => Navigator.pop(context),
-            child: Text('Cancel'),
+            child: const Text('Cancel'),
           ),
           MaterialButton(
             onPressed: () {
               Navigator.pop(context);
               context.read<Shop>().addToCart(product);
             },
-            child: Text('Yes'),
+            child: const Text('Yes'),
           ),
         ],
       ),
@@ -71,12 +70,12 @@ class MyProductTile extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Text(
-                product.description,
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.inversePrimary,
-                ),
-              ),
+              // Text(
+              //   product.description,
+              //   style: TextStyle(
+              //     color: Theme.of(context).colorScheme.inversePrimary,
+              //   ),
+              // ),
             ],
           ),
           const SizedBox(
