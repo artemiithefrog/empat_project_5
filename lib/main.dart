@@ -1,20 +1,32 @@
+import 'package:empat_project_5/models/shop.dart';
+import 'package:empat_project_5/pages/cart_page.dart';
+import 'package:empat_project_5/pages/intro_page.dart';
+import 'package:empat_project_5/pages/shop_page.dart';
+import 'package:empat_project_5/themes/light_mode.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => Shop(),
+    child: const MyApp(),
+  ));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const IntroPage(),
+      theme: lightMode,
+      routes: {
+        '/intro_page': (context) => const IntroPage(),
+        '/shop_page': (context) => const ShopPage(),
+        '/cart_page': (context) => const CartPage(),
+      },
     );
   }
 }
