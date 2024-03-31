@@ -54,7 +54,7 @@ class MyProductTile extends StatelessWidget {
                   ),
                   width: double.infinity,
                   padding: const EdgeInsets.all(25),
-                  child: const Icon(Icons.favorite),
+                  child: Image.asset(product.imagePath),
                 ),
               ),
               const SizedBox(
@@ -70,12 +70,6 @@ class MyProductTile extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              // Text(
-              //   product.description,
-              //   style: TextStyle(
-              //     color: Theme.of(context).colorScheme.inversePrimary,
-              //   ),
-              // ),
             ],
           ),
           const SizedBox(

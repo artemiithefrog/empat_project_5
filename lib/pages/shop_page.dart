@@ -17,7 +17,7 @@ class ShopPage extends StatelessWidget {
           backgroundColor: backgroundColor,
           elevation: 0,
           foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('Shop Page'),
+          title: const Text('Seventh'),
           actions: [
             IconButton(
               onPressed: () => Navigator.pushNamed(context, '/cart_page'),
@@ -48,7 +48,6 @@ class ShopPage extends StatelessWidget {
                 padding: const EdgeInsets.all(15),
                 itemBuilder: (context, index) {
                   final product = products[index];
-
                   return MyProductTile(product: product);
                 },
               ),
